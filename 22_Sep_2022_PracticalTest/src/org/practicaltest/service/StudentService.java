@@ -7,11 +7,20 @@ import org.practicaltest.dao.StudentDAO;
 
 public class StudentService {
 
-	
+	StudentDAO studentDAO=new StudentDAO();
 	public boolean addStudent(Student student) {
-	 StudentDAO studentDAO=new StudentDAO();
+	 
 	 studentDAO.addStudent(student);
 	 return true;
 	 
 	}
+
+	public void addSerDisplay() {
+		// TODO Auto-generated method stub
+		studentDAO.printStudent();
+			
+		
+	}
+
+	
 }

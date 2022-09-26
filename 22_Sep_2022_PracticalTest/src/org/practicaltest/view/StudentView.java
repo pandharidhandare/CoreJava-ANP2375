@@ -6,10 +6,10 @@ import org.practicaltest.service.StudentService;
 public class StudentView {
 
 	static Scanner scanner=new Scanner(System.in);
-	
+	StudentService ser = new StudentService();
 	public boolean addInfo() {
 		System.out.println("Enter 10 Student Details"); 
-		for(int i=0;i<10;i++) { 
+		for(int i=0;i<2;i++) { 
 		System.out.println("Add Student");
 		System.out.println("Enter Student Details");
 		System.out.println();
@@ -18,10 +18,16 @@ public class StudentView {
 		scanner.nextLine();
 		System.out.println("Enter Student Name");
 		String name =scanner.nextLine();
-		StudentService ser = new StudentService();
+		
 		System.out.println(ser.addStudent(new Student(id,name)));
 		}
 		return true;
+	}
+
+	public void addView() {
+		// TODO Auto-generated method stub
+		ser.addSerDisplay();
+		
 	}
 
 

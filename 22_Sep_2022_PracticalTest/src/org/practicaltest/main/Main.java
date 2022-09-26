@@ -8,6 +8,12 @@ public class Main {
     	StudentView student = new StudentView();
     	student.addInfo();
     	System.out.println("all student Added");
+    	
+    	System.out.println("Display All Student Added");
+    	
+    	student.addView();
+    		
+    	
 
 	}
 	

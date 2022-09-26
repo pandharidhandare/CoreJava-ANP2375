@@ -8,15 +8,17 @@ import org.practicaltest.model.Student;
 public class StudentDAO {
 
 	
-		TreeSet<Student> treeSet=new TreeSet<>();
+	private	TreeSet<Student> treeSet=new TreeSet<>();
 		
 		public boolean addStudent(Student student) {
 			// TODO Auto-generated method stub
 
 			treeSet.add(student);
-			System.out.println(treeSet);
+	
 			return true;
 		}
-		
+		public void printStudent() {
+			System.out.println(treeSet);
+		}
 	
 }
