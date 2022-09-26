@@ -1,5 +1,6 @@
 package org.practicaltest.dao;
 
+import java.util.Iterator;
 import java.util.TreeSet;
 
 import org.practicaltest.model.Student;
@@ -18,6 +19,7 @@ public class StudentDAO {
 			return true;
 		}
 		public void printStudent() {
+			Iterator it = 
 			System.out.println(treeSet);
 		}
 	
