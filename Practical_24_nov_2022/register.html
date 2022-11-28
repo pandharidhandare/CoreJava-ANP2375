@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function myFun(){
+            let p1 = document.getElementById("pswd1").value;
+            let p2 = document.getElementById("pswd2").value;
+            let name1 = document.getElementById("fname").value;
+            let name2 = document.getElementById("Lname").value;
+           
+            if(name1==""){
+                document.getElementById("blankMsg").innerHTML = "***fill First Name";
+                return false;
+            }
+            if(name2==""){
+                document.getElementById("charMsg").innerHTML = "***fill Last Name";
+                return false;
+            }
+
+            if(p1==""){
+                document.getElementById("message1").innerHTML = "***fill Password";
+                return false;
+            }
+
+            if(p2==""){
+                document.getElementById("message2").innerHTML = "***fill confirm password";
+                return false;
+            }
+            if(p1.length<8){
+                document.getElementById("message1").innerHTML = " password must be at least 8 character";
+                return false;
+            }
+            if(p1.length>15){
+                document.getElementById("message1").innerHTML = "password must not be more than 15 character";
+                return false;
+            }
+            if(p1!=p2){
+                alert("password did not match");
+            }
+            else{
+                alert("password Match");
+            }
+
+        };
+    </script>
+
+
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+   <link rel="stylesheet" href="./CSS/Style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEducate Transforming online Education</title>
+</head>
+<body>
+<nav class="navbar" >
+    <ul class="nav-list ">
+        <div class="logo" id="a1">LetS_Learn</div>
+        <li><a href="home.html" target="_blank">Home</a></li>
+        <li><a href="about.html" target="_blank">About Us</a></li>
+        <li><a href="serivices.html" target="_blank">Services</a></li>
+        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+        <li><a href="Register.html" target="_blank" style="color: rgb(59, 186, 202); background-color: wight;">Register</a></li>
+    </ul>
+
+</nav>
+
+
+<h1 style="color:blue;">Javascript Form validation</h1>
+        <form name="myform" method="post" action="#"  onsubmit="return myFun()">
+          firstName : <input type="text" id="fname" value="" placeholder="Enter name" /><br>
+          <span id="blankMsg" style="color: red;"></span><br>
+          LastName : <input type="text"  id="Lname" value="" placeholder="Enter user name" /><br>
+          <span id="charMsg" style="color: red;"></span><br>
+          Password : <input type="password" id="pswd1"  value="" placeholder="Enter name password" /><br>
+          <span id="message1" style="color: red;"></span><br>
+          ConfirmPass : <input type="password"  id="pswd2" value="" placeholder="Renter password" /><br>
+          <span id="message2" style="color: red;"></span><br>
+          <input type="submit" value="login" >
+          <input type="reset" value="Clear"/>
+
+
+
+</body>
+</html>
